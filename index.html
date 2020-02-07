@@ -1,455 +1,156 @@
 
-<title>
-    Calamari
-</title>
-<body style="margin:0px;line-height:12px;background-color:rgba(250, 250, 250, 255);">
-   <style>
-        @font-face {
-            font-family:"SFpro";
-            src: url("https://calamari.cc/font.ttf") format("truetype");
-        }
-        
-        @font-face {
-            font-family:"SFbold";
-            src: url("https://calamari.cc/fontbold.ttf") format("truetype");
-        }
-        a:link {
-          text-decoration: none;
-        }
-        
-        a:visited {
-          text-decoration: none;
-        }
-        
-        a:hover {
-          text-decoration: underline;
-        }
-        
-        a:active {
-          text-decoration: underline;
-        }
-        .frame {
-            width:600px;
-            height: 411px;
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-image: url(AppImage.png)  
-        }
-        
-        .frame iframe {
-          position: relative;
-          top: 62px;
-          left: -116px;
-          right: 0px;
-          width: 290px;
-          height: 324px;
-          border: none;
-        }
-    </style>   
-   <div id="bar" style="background-color:rgba(45, 45, 45, 0.98);width:100%;height:44px;">
-        <font face="Arial" style="color:white;">
-            <center>
-                <a href="https://calamari.cc"><img id="logo" src="https://calamari.cc/SmallWhiteLogo.png" style="position:absolute;"></a>
-                
-                <button id="logobtn" style="color:white;position:static;width:39px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                </button> 
-       
-                <button id="space" style="color:white;position:static;width:57px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                </button>
-                
-                <button onclick="window.location.href='https://calamari.cc/Purchase/';" id="buybtn" style="font-size:14px;font-family:SFpro;color:white;position:static;height:44px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                    Buy
-                </button>
-                
-                <button id="space" style="color:white;position:static;width:57px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                </button>
-                
-                <button  onclick="window.location.href='/Download';" id="buybtn" style="font-size:14px;font-family:SFpro;color:white;position:static;height:44px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                    Download
-                </button>
-                
-                <button id="space" style="color:white;position:static;width:57px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                </button>
-                
-                <button  onclick="window.location.href='/Support';" id="helpbtn" style="font-size:14px;font-family:SFpro;color:white;position:static;height:44px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                    Support
-                </button>
-                
-                <button id="space" style="color:white;position:static;width:57px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                </button>
-                
-                <button  onclick="window.location.href='/Register';" id="buybtn" style="font-size:14px;font-family:SFpro;color:white;position:static;height:44px;background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;outline:none;">
-                    Account
-                </button>
-            </center>         
-        </font>  
-    </div>
-    <div id="block1" style="background-color:rgba(250, 250, 250, 255);width:100%;height:100%;">
-        <font face="SFbold" style="color:black;font-size:36px;">
-            <center>
-                <br>
-                <br>
-                <br>
-                <br>
-                <b> Calamari Support </b>
-                <br>
-                <br>
-                <br>
-                <font face="SFbold" style="color:black;font-size:18px;">
-                    (for inquiries not listed here, email marie@calamari.cc)
-                </font>
-                <br>
-                <br>
-                <hr> 
-                <font style="font-size:18px;line-height:24px;">
-                    <b>Why can't I sign into Calamari?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     You may be unable to sign in because:<br>
-                    - You do not have the latest version. Please download it <a href="/download">here</a><br>
-                    - You forgot your password. Go to <a href="https://calamari.cc/account">https://calamari.cc/account</a> to reset it<br>
-                    - You shared your account and the password and/or email was changed<br>
-                    </div>
-                    <br>
-                    <br>
-                    <b>I get this error when running Calamari-M on macOs:</b><br>
-                    <img src="Sadalina.jpg"><br>
-                    <div style="width:600px;display:inline-block;">
-                     This is a common error message for those using macOs Catalina (10.15).<br>
-                    To fix it, open <b>Terminal</b> and run the following command:<br>
-                    <font style="background-color:rgb(222,222,222);">sudo spctl --master-disable</font>
-                    </div>
-                    <br>
-                    <br>
-                    <b>Why can't I run a specific script?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    Our LSI is specifically crafted to be resistant to differences and changes between Lua applications. 
-                    If you spot a script that is currently incompatible with Calamari, please email a copy of it to marie@calamari.cc.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Does Calamari support Luraph/Synapse Xen obfuscators?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    Yes, there is  official support for script obfuscators such as Synapse Xen and Luraph.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Calamari can't login/won't inject</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    You may have a 32 bit operating system or an OS below Windows 10. If not, please download the <a href="https://cdn.calamari.cc/redist_packages.zip">redist packages.</a>
-                    </div>
-                    <br>
-                    <br>
-                    <b>Does Calamari have getrawmetatable (remote spy)?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    Yes. Calamari does include getrawmetatable. For a full list of custom environment APIs, please visit <a href="https://calamari.cc/Environment">https://calamari.cc/Environment</a>
-                    </div>
-                    <br>
-                    <br>
-                    <b>Can't access the Calamari website / Failed to authenticate</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    Unfortunately, if you are failing to authenticate to the Calamari servers, your ISP (internet service provider) or internet configuration could be blocking our host. We cannot help you with this, however, you may be able to fix it by making sure that your date and time settings are correct, and by testing to see if it works on a VPN. Other than that, try restoring your computer to its factory settings.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Can you change your username?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    No. Unfortunately, you are not able to change your username because it is used to identify your account.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Can you share your Calamari account?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    Yes, but we advise against it. If your account is stolen, we are unable to recover it.
-                    </div>
-                    <br>
-                    <br>
-                    <b>I'm from Bleu. How do I transfer my key to Calamari?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    You can use the same key you had for Bleu and redeem it into <a href="/register">https://calamari.cc/register</a>
-                    </div>
-                    <br>
-                    <br>
-                    <b>When I redeem my serial it's invalid</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    You may be unable to redeem it because:<br>
-                    - The serial you redeemed is invalid<br>
-                    - Your serial is from Bleu, and it's blacklisted<br>
-                    - The serial has already been redeemed<br>
-                    <i>We are unable to grant new serials.</i>
-                    </div>
-                    <br>
-                    <br>
-                    <b>I forgot my username</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    To find your username, just look for the email sent to you when you first created your account. It will have the username listed.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Does my Calamari license last forever?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Yes. Your Calamari license is permanent.<br>
-                    </div>
-                    <br>
-                    <br>
-                    <b>I reset my password and it won't let me click the link!</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     You may have spam protection on. If that's the case, turn it off and click it. If not, try resetting it again.
-                    </div>
-                    <br>
-                    <br>
-                    <b>How do I buy with gift card?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     We only accept Amazon gift cards. You just compose an email to marie@calamari.cc detailing what version you want, with the code in the email.
-                    </div>
-                    <br>
-                    <br>
-                    <b>I didn't receive my key in the email after buying</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Email marie@calamari.cc with your email address that you used to purchase Calamari.
-                    </div>
-                    <br>
-                    <br>
-                    <b>When I save a game, the meshes are all jacked up</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Unfortunately, the saveinstance script is not 100% accurate when saving.
-                    </div>
-                    <br>
-                    <br>
-                    <b>I have my serial. What do I do next?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Register it with your email, a new username, and a new password at <a href="https://calamari.cc/register">https://calamari.cc/register</a>
-                    </div>
-                    <br>
-                    <br>
-                    <b>Does Calamari support Windows 7?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Unfortunately, we do not have, and do not plan to have support for Windows 7.
-                    </div>
-                    <br>
-                    <br>
-                    <b>How do I get to C:/Windows/SysWOW64</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Press your <b>WINDOWS KEY + R KEY</b> at the same time, type the path, and press enter.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Calamari keeps deleting itself.</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Redownload at <a href="https://calamari.cc/download">https://calamari.cc/download</a>
-                    </div>
-                    <br>
-                    <br>
-                    <b>My app has been translocated!</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Make sure to follow all the steps listen on the <a href="https://calamari.cc/download/mac">download page</a>. Make sure to unzip each file OUTSIDE of your CalamariApps folder. Make sure CalamariApps is in Documents. Not Desktop, not Photos, not Videos, not your iTunes Library, DOCUMENTS.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Calamari gave me a BSOD!</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Actually, it didn't. If you are using Avast, AVG, PandaAV, or similar anti virus softwares, you may experience BSODs when performing certain tasks. To fix this, simply uninstall your anti virus software.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Why doesn't game.HttpGet work?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Sometimes, game.HttpGet may be broken due to a faulty update. Please wait for the next one for it to be fixed.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Do I receive Calamari instantly when I buy?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     You will receive Calamari accordingly in the following scenarios:<br>
-                     - Stripe/Credit Card should be instant.<br>
-                     - BTC takes up to 24 hours to confirm. May not be instant.<br>
-                     - Gift cards will require a staff member to appoint a key. May take 30 minutes-two days.<br>
-                    </div>
-                    <br>
-                    <br>
-                    <b>I redeemed my gift card onto my account. Can I use my balance to buy Calamari?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Unfortunately, we cannot take your balance out of your account.
-                    </div>
-                    <br>
-                    <br>
-                    <b>The balance of my gift card is more than the price of Calamari. Can you take just some of the balance away?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Unfortunately, we cannot take a specific amount of the balance out of a gift card. We also cannot provide change.
-                    </div>
-                    <br>
-                    <br>
-                    <b>It keeps saying "awaiting payment" on Stripe/Credit Card</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Send marie@calmari.cc your email address and the issue you're facing.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Is Calamari level 7?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Calamari uses level 6. However, level 7 and level 6 are essentially the same, just different numbers.
-                    </div>
-                    <br>
-                    <br>
-                    <b>I run a script and nobody else can see it. WHY?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Calamari and similar software are unable to penetrate servers. You only have control of your client.
-                    </div>
-                    <br>
-                    <br>
-                    <b>I sent an email to buy Calamari. No response</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     The staff members may take up to two days to reply or more.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Do you accept Amazon outside of the usa?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     No. Only Amazon USA gift cards. If you are from outside of the USA, please use Stripe/Credit Card.
-                    </div>
-                    <br>
-                    <br>
-                    <b>What happened to Amy Moore?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     The story went down like this: Miss Moore blew her top, right? And like that wasn't history enough, she then decided to steal a car, shoot a cop, speed away two thousand miles. That girl didn't even stop until she hit New Orleans! That's all right though, it's just one thing. Her wedding ring. Or anything. She left behind. Forgot to pack! HOW the hell is she gonna get it back!?
-                    </div>
-                    <br>
-                    <br>
-                    <b>My application crashes on inject/crash</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     You may need to update your Calamari, or restart it. Or restart your PC.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Does Calamari support loadstrings?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Yes, it does. 
-                    </div>
-                    <br>
-                    <br>
-                    <b>Is Calamari serversided?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     No. It is not. Nor will it ever be.
-                    </div>
-                    <br>
-                    <br>
-                    <b>How do I make/use a custom theme?</b><br>.
-                    <div style="width:600px;display:inline-block;">
-                     If you are using macOs, you can write to /Users/Shared/Calamari/input.txt with your script to execute in Calamari-M.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Calamari says my password is incorrect, but I'm 100% sure it's correct. HELP?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     By mistake, some endpoints may ignore special characters. If you encounter one of these errors, temporarily change your password to remove the special characters, and send us an email at marie@calamari.cc with details about where you found it.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Why was Bleu discontinued?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Bleu is a retired product by Inspect that was succeeded by Calamari.
-                    </div>
-                    <br>
-                    <br>
-                    <b>What does the grammatical test have to do with Calamari?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     As stated in the TOS, upon request, we have the right to enroll you in courses for Calamari training at any point at any time without reason. Unfortunately, we cannot disclose what the grammatical test is being used for.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Can you use Calamari on another computer?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Yes. Upon sign-in, Calamari will attach to your network and automatically release itself after five minutes of activity. If you are using Calamari on the same network, you may have as many computers as you want using the Calamari software at once. If another computer from another network attempts to login using the credentials, it will display a notice that the account is already in use.
-                    </div>
-                    <br>
-                    <br>
-                    <b>How do I use auto execute?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                      There are actually two auto execute folders listed under C:/Calamari/auto_execute. The first one, auto_attach, will run all of the scripts in the folder the moment Calamari detects that a process is found. The second folder, on_run_button, will run all the scripts inside the folder the first time you press the "run" button to inject a script on that process.
-                    </div>
-                    <br>
-                    <br>
-                    <b>How do I use Multi Applications/Windows?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                    To use this, make sure Calamari is not attached to any process, and those processes are closed. Then, check to Tools->Multi Applications->Enable Multi Applications. Afterwards, you can open as many Windows as you want. Whenever you want to inject scripts into one of these application, you can choose a PID from the Tools->Multi Applications menu, and a new Calamari window will pop up attached onto that process.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Does Calamari auto update?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Yes. Calamari for Windows has a partial auto update that runs without custom functions.
-                    </div>
-                    <br>
-                    <br>
-                    <b>I got scammed. HELP!</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     Unfortunately, if you bought from third party sellers, we cannot guarantee that you will receive your product, and we are unable to assist you.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Can I buy with other payment methods not listed?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     No.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Who do we pet?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     We pet that lovely Deima.
-                    </div>
-                    <br>
-                    <br>
-                    <b>Where are you based?</b><br>
-                    <div style="width:600px;display:inline-block;">
-                     We are currently based in the United States of America.
-                    </div>
-                    
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
-                    <div style="width:600px;display:inline-block;">
-                        <font style="font-size:18px;line-height:24px;">
-                        <b><center>Calamari Seal of Oath</center></b>
-                        <img width="200px" src="oath.png"><br><br>
-                        <b><center>Hardware Requirements</center></b>
-                        Do NOT purchase Calamari if you have Virgin Media, if you do not have the latest drivers/software updates on your computer, if you have any operating system besides Windows 10 x64 or macOs 10.11 and higher, if you are using 32-bit architecture, if you have Windows 8.1 or below, or if your IP address changes dynamically within a matter of 5 minutes.
-                        <br>
-                        <br>
-                        The macOs Catalina operating system could prevent Calamari-M from running. As always, you MUST HAVE ADMIN PERMISSION to use Calamari-M. We highly encourage using an OS from macOs El Capitan through macOs Mojave. You will NOT receive a refund if Calamari-M does not work on macOs Catalina.
-                        <br>
-                        <br>
-                        <center><b>Terms of Service</b></center>
-                        * No Refund Policy
-                        We do not provide refunds. All sales are final. 
-                        Calamari user surveys will be occasionally conducted. If you wish to opt-out of these surveys, refer to the miscellaneous regarding account deletion.
-                        Upon request, you must surrender a set of voice lines to any of the Calamari staff members. These voice lines can, and will be used for public or commercial projects. You will automatically be opted out of this term 24 months after you aqcuire your Calamari license. At Calamari, we have every right to enroll you in a course for Calamari training at any point upon demand. To combat misinformation, we are placing strict guidelines on what can or cannot be stated while under this agreement. You may NOT under any circumstances utter any phrases similar to "Calamari does not have X [feature that is available]", "Calamari crashes on print", "Dooda is X[er] than Deima", or anything related to misinformation about Calamari's team or product base. By obtaining a license, you agree to follow all of these terms, without the possibility of removing yourself from this agreement, unless granted by a Calamari staff member or moderator.
-                        <br>
-                        <br>
-                        * Liability Disclaimer 
-                        We are not responsible for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including (but not limited to) lost profit, lost revenue, lost data, or other damages that arise from your use of Calamari. 
-                        <br>
-                        <br>
-                        * Privacy Policy
-                        We respect your data, we do not sell nor distribute the data we collect about you to any third-party individual or organization. All Lua Script Data sent to our servers is only used temporarily for secure compilation, then discarded. We collect your IP (Internet Protocol) address and e-mail address as a way to identify you and keep in contact with you. If you would like your data to be deleted from our database, scroll to the bottom of the Miscellaneous section.
-                        <br>
-                        <br>
-                        Calamari's websites may collect "cookies" to help us better understand user behavior, give us data on how many people visit our site and their location, and facilitate and measure the effectiveness of web searches. We treat this information as non-personal information unlike your email address and IP (Internet Protocol) address which is considered personal information. 
-                        <br>
-                        <br>
-                        * Miscellaneous
-                        "We" and "us" refer to the staff team of Calamari. "Calamari" refers to the product we sell."You" refers to any person who has consented to these terms or has become contractually bound to them, whether such person is identified or not at the time. These terms are governed by California law, excluding its conflicts of law principles, and if there is a lawsuit between you and us, jurisdiction and venue will lie exclusively in the State where the defendant is located, if within the United States, or in Santa Clara County, California otherwise. If any part of these terms is invalid, the remaining provisions will be unaffected. These Terms of Service constitute the entire agreement among the parties relating to this subject matter, and they will continue to govern any issues that arise out of your use of Calamari  even after you discontinue using them. We may revise these terms from time to time without notice. Any changes apply as of the time they are posted. Calamari is not meant for use by children under age 13; if your child is younger than 13 please allow them to use it only under your supervision.
-                        <br>
-                        <br>
-                        If you would like to opt-out of our Terms of Service, you may send an email to "marie@calamari.cc" with the header "OPT-OUT". After we receive the email (which may take up to 1-12 weeks), we will delete all of your data we have collected and stored. Warning: Opting-out will result in a revocation of your Calamari ownership license.  These terms may change at any point. Aside from a site notice, you are held responsible for keeping yourself up to date with your user agreement.
-                        </font>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-                </font>
-            </center>
-        </font>
-    </div>
-    <br>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Owl Hub</title>
+
+        <meta charset = "utf-8">
+		<link rel = "shortcut icon" type = "image/x-icon" href="Logo.ico" />
+
+		<meta name = "author" content = "Owl Hub" />
+		<meta name = "description" content = "Owl Hub" />
+		<meta name = "keywords" content = "Owl, Hub, OwlHub, script, lua, krnl" />
+
+		<meta property = "og:title" content = "Owl Hub" />
+		<meta property = "og:description" content = "Official website for Owl Hub" />
+		<meta property = "og:type" content = "website" />
+		<meta property = "og:url" content = "https://owlhub.ga" />
+		<meta property = "og:secure_url" content = "https://owlhub.ga">
+		<meta property = "og:image" content = "https://owlhub.ga/Logo.ico" />
+
+        <style>
+            body {
+				background-color: rgb(25, 25, 25);
+                color: white;
+                font-family: "Trebuchet MS";
+                background-image: url(Background.png);
+				background-attachment: fixed;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+            body::-webkit-scrollbar {
+                width: 12px;
+            }
+      
+            body::-webkit-scrollbar-thumb {
+                background-color: rgb(80, 80, 80);
+            }
+
+            #owlImage {
+                margin-top: 20px;
+                height: 90px;
+            }
+
+            #scriptBtn {
+                color: rgb(255, 255, 255);
+                background-color: rgb(45, 45, 45);
+                margin-top: 45px;
+                border: 0px;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 650px;
+                height: 35px;
+            }
+
+            #copyPopup {
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 255, 255);
+                border: 0px;
+                border-radius: 4px;
+                text-align: center;
+                position: absolute;
+                display: none;
+                width: 150px;
+                height: 35px;
+            }
+
+            #gamesBtn {
+                background-color: rgb(45, 45, 45); 
+                color: rgb(255, 255, 255); 
+                font-size: large; 
+                border: 0px; 
+                border-radius: 2px;
+                cursor: pointer; 
+                width: 100px; 
+                height: 50px;
+            }
+
+            #discordBtn {
+                background-color: rgb(114, 137, 218); 
+                color: rgb(255, 255, 255); 
+                font-size: large; 
+                border: 0px; 
+                border-radius: 2px;
+                cursor: pointer; 
+                width: 100px; 
+                height: 50px;
+            }
+
+            #detailLine {
+                margin-top: 45px;
+                border: 1px solid rgb(153, 95, 39);
+                width: 500px;
+                height: 0px;
+            }
+
+            #copyBtn:hover {
+                background-color: rgb(70, 70, 70);
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" value="Copied to clipboard!" readonly id="copyPopup">
+        <center>
+            <img src="https://cdn.discordapp.com/icons/621532535389814794/8af648668263775f8a72783cc0653bd0.png?size=2048" alt="Owl Logo" id="owlImage">
+            <br>
+            <button id="scriptBtn"><span style="color: rgb(78, 153, 204);">loadstring</span>(game:<span style="color: rgb(78, 153, 204);">HttpGet</span>(<span style="color: rgb(80, 179, 179);">"</span><span style="color: rgb(149, 199, 144);">https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt</span><span style="color: rgb(80, 179, 179);">"</span>))();</button>
+            <br>
+            <div id="detailLine"></div>
+            <br>
+            <h1 style="font-family: monospace;">What is Owl Hub?</h1>
+            <i style="color: rgb(180, 180, 180);"><span style="color: rgb(153, 95, 39);">Owl</span> <span style="color: rgb(255, 255, 255);">Hub</span> is a <span style="color: rgb(0, 192, 80);">free</span> Roblox script hub developed by <span style="color: rgb(255, 255, 255);">Google Chrome</span> and <span style="color: rgb(255, 255, 255);">CriShoux</span>.<br>It currently has 30+ games. It is made to be executed on Roblox exploits. It works on the exploits that are shown below.</i>
+            <div id="detailLine"></div>
+            <br>
+            <h1 style="font-family: monospace;">Exploits</h1>
+            <i style="color: rgb(180, 180, 180);"><a href="https://x.synapse.to/" target = "_blank" style="color: rgb(180, 180, 180);">Synapse X</a><br><br><a href="https://elymltd.selly.store/product/a6576d71/" target = "_blank" style="color: rgb(180, 180, 180);">Sentinel</a><br><br><a href="https://www.asshurthosting.pw/" target = "_blank" style="color: rgb(180, 180, 180);">Sirhurt</a><br><br><a href="https://cdn.discordapp.com/attachments/657795414820651008/673024862163304488/Krnl_Bootstrapper.exe" target = "_blank" style="color: rgb(180, 180, 180);">Krnl</a></i>
+            <div id="detailLine"></div>
+            <br>
+            <h1 style="font-family: monospace;">Games</h1>
+            <button id="gamesBtn">VIEW</button>
+            <div id="detailLine"></div>
+            <br>
+            <h1 style="font-family: monospace; color: rgb(114, 137, 218);">Discord</h1>
+            <button id="discordBtn">JOIN</button>
+            <br>
+            <br>
+            <br>
+        </center>
+
+        <script type="text/javascript">
+            const scriptBtn = document.getElementById("scriptBtn");
+            const copyPopup = document.getElementById("copyPopup");
+            const gamesBtn = document.getElementById("gamesBtn");
+            const discordBtn = document.getElementById("discordBtn");
+
+            scriptBtn.addEventListener("click", () => {
+                const scriptBox = document.createElement("textarea");
+                scriptBox.value = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();';
+                document.body.appendChild(scriptBox);
+                scriptBox.select();
+                document.execCommand("copy");
+                document.body.removeChild(scriptBox);
+                copyPopup.style.display = "block";
+                setTimeout(() => {copyPopup.style.display = "none";}, 1000);
+            });
+
+            gamesBtn.addEventListener("click", () => {
+                window.open("https://crishoux.github.io/OwlHub/games");
+            });
+
+            discordBtn.addEventListener("click", () => {
+                window.open("https://discord.gg/3FbSYGT");
+            });
+        </script>
+    </body>
+</html>
