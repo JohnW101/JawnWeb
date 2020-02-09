@@ -1,0 +1,16 @@
+local Player = game.Players.LocalPlayer;
+while true do
+    pcall(function()
+        local mypos = Player.Character.HumanoidRootPart.CFrame.p;
+        Player.Character.Humanoid.WalkSpeed = 40;
+        for index, value in next, workspace.Enemies:GetDescendants() do
+            if (value:FindFirstChildOfClass("Humanoid") and (value ~= Player.Character)) then
+                if ((value.HumanoidRootPart.CFrame.p - mypos).Magnitude < 20) then
+                    value.Humanoid.Health = 0;
+                end;
+            end;
+        end;
+    end);
+    wait(0.25);
+end;
+wait(10)
